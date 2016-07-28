@@ -35,6 +35,7 @@ function prompt_bdoerr_precmd_async {
   if (( $+functions[git-info] )); then
     git-info
     typeset -p git_info >! "$_prompt_bdoerr_precmd_async_data"
+    echo "$_prompt_bdoerr_precmd_async_data"
   fi
 
   # Signal completion to parent process.

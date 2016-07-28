@@ -10,4 +10,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+#
 # Customize to your needs...
+#
+
+export MPROJECTS_DIR=/opt/projects
+hash -d p=$MPROJECTS_DIR
+
+export MSOURCES_DIR=/opt/source
+hash -d s=$MSOURCES_DIRk
+
+export EDITOR=vim
+
+[[ -a ~/.localrc ]] && source ~/.localrc
+
+# added by travis gem
+[ -f /Users/bdoerr/.travis/travis.sh ] && source /Users/bdoerr/.travis/travis.sh
